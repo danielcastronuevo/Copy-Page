@@ -1,0 +1,482 @@
+/* - - - - - - - - - - Formateo - - - - - - - - - - */
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-y: scroll;
+}
+
+/* - - - - - - - - - - Loading Screen - - - - - - - - - - */
+
+.loading_screen_container{
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1000;
+}
+
+.loading_screen_logo_01{
+    width: 80px;
+}
+
+.loading_screen_logo_02{
+    width: 72px;
+    position: absolute;
+    bottom: 36px;
+}
+
+/* - - - - - - - - - - Main container - - - - - - - - - - */
+
+.main_container{
+    margin-top: 32px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    display: none;
+}
+
+/* - - - - - - - - - - Form container - - - - - - - - - - */
+
+.form_main_container{
+    margin-top: 7px;
+    border: 1px solid rgb(219, 219, 219);
+    width: 350px;
+    height: 402px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.form_container{
+    width: 270px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.form_container div{
+    display: flex;
+}
+
+.form_container form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form_container form input{
+    height: 38px;
+    width: 100%;
+    padding: 14px 8px 14px;
+    margin-bottom:7px ;
+    border: none;
+    outline: none;
+    border: 1px solid rgb(219, 219, 219);
+    background: #FAFAFA;
+    padding-left: 10px;
+    border-radius: 3px;
+
+    font-size: 12px;
+}
+
+.form_container form input:focus{
+    border: 1px solid rgb(171, 171, 171);
+}
+
+.form_container form div input:focus{
+    border: 1px solid rgb(168,168,168);
+    /* border-right: none;     */
+}
+
+.form_container form div input:focus ~ button{
+    border: 1px solid rgb(168,168,168);
+    border-left: none;  
+}
+
+.form_container form div input{
+    /* border-right: none; */
+    /* border-radius: 3px 0 0 3px; */
+    border-radius: 3px;
+}
+
+
+.show_password_button{
+    height: 38px;
+    border: none;
+    outline: none;
+    background: #FAFAFA;
+    border: 1px solid rgb(219, 219, 219);
+    border-left: none;
+    font-weight: 500;
+    padding-right: 8px;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    display: none;
+}
+
+.show_password_button:hover{
+    color: rgb(157,157,157);
+}
+
+#form_submit{
+    border: none;
+    outline: none;
+    margin-top: 6px;
+    height: 32px;
+    background: rgb(76, 181, 249);
+    border-radius: 8px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+    padding:7px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#form_submit:hover{
+    background: rgb(0,149,246)
+}
+
+#form_submit:active{
+    background: rgb(24,119,242);
+}
+
+.instagram_text{
+    margin: 35px  0 20px 0;
+
+    background-image: url(resources/instagram_text.png);
+    background-position: 0px -52px;
+    background-size: auto;
+    width: 175px;
+    height: 51px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.placeholder_password, .placeholder_mail{
+    position: absolute;
+    font-size: 12px;
+    color: rgb(117,117,117);
+    transform: translate(11px, 11px);
+    transform-origin: left;
+    transition: 150ms;
+}
+
+
+
+
+
+
+
+
+
+
+.separator_container{
+    height: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    
+}
+
+.separator_container p{
+    color: #737373;
+    margin: 18px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.separator{
+    background: #dbdbdb;
+    height: 1px;
+    width: 100%;
+}
+
+
+
+
+
+
+.log_in_facebook_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transform: translate(0, -10px);
+    user-select:none;
+}
+
+.log_in_facebook_container p{
+    color: #385185;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.facebook_icon{
+    margin: 0 7px;
+    background-image: url(resources/facebook_ico.png);
+    width: 16px;
+    height: 16px;
+    background-position: center;
+    background-size: 100%;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+
+
+
+
+.forgot_password{
+    color: #00376b;
+    font-size: 12px;
+    transform: translate(0, -8px);
+    cursor: pointer;
+    user-select:none;
+}
+
+.forgot_password:active{
+    color: rgb(127,155,181);
+}
+
+/* - - - - - - - - - - "No tienes cuenta?" container - - - - - - - - - - */
+
+.have_no_acc_container{
+    margin-top: 10px;
+    border: 1px solid rgb(219, 219, 219);
+    width: 350px;
+    height: 63px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size:14px;
+}
+
+.have_no_acc_container a{
+    color: #0095f6;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    user-select:none;
+}
+
+.have_no_acc_container a:active{
+    color: rgb(127,202,250);
+}
+
+/* - - - - - - - - - - "Descarga la App" container - - - - - - - - - - */
+
+.download_app_container{
+    margin-top: 25px;
+    width: 350px;
+    height: 63px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size:14px;
+    gap: 15px;
+}
+
+.download_app_container img{
+    width: 134.28px;
+    height: 40px;
+    margin-right: 2px;
+    cursor: pointer;
+}
+
+.download_app_container img:active{
+    opacity: .7;
+}
+
+.download_app_container img:nth-child(2){
+    width: 110.77px;
+    height: 40px;
+    margin-left: 2px;
+}
+
+/* - - - - - - - - - - Footer container - - - - - - - - - - */
+
+footer{
+    display: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.links_container{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 16.5px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.links_container a{
+    font-size: 12px;
+    color: rgb(115,115,115);
+    text-decoration: none;
+    cursor: pointer;
+    user-select:none;
+}
+
+.links_container a:active{
+    color: rgb(205,205,205);
+}
+
+
+
+.languaje_container{
+    margin-top:16px;
+    margin-bottom: 58px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: rgb(115,115,115);
+    text-decoration: none;
+    gap: 16.5px;
+}
+
+.languaje_container select{
+    text-decoration: none;
+    border: none;
+    color: rgb(115,115,115);
+    width: 112px;
+    font-size: 12px;
+}
+
+.languaje_container select option{
+    color: #000;
+    font-size: 12px;
+}
+
+
+
+.home_phones{
+    background-image: url(resources/home-phones.png);
+    width: 380.312px;
+    height:581.141px;
+
+    background-size: 468.32px 634.15px;
+    background-position: -46px 0;
+    flex-basis: 380.32px;
+    margin-right: 32px;
+}
+
+/* - - - - - - - - - - Animación de fotos - - - - - - - - - - */
+
+.screenshot_01,.screenshot_02,.screenshot_03,.screenshot_04{
+    width: 250px;
+    height: 538.828px;
+    transform: translate(113px, 27px);
+    position: absolute;
+    animation-duration: 20s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-name: screenshots_move;
+    opacity: 0;
+}
+
+@keyframes screenshots_move {
+    0%{
+        opacity: 0;
+    }
+    13%{
+        opacity: 1;
+    }
+    27%{
+        opacity: 1;
+    }
+    35%{
+        opacity: 0;
+    }
+}
+
+.screenshot_01{
+    animation-delay: 0;
+}
+.screenshot_02{
+    animation-delay: 5s;
+}
+.screenshot_03{
+    animation-delay: 10s;
+}
+.screenshot_04{
+    animation-delay: 15s;
+}
+
+
+
+
+
+@media (max-width: 875px) {
+    .left_main_container{
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    .form_main_container{
+        border: none;
+    }
+
+    .have_no_acc_container{
+        border: none;
+    }
+
+    .main_container{
+        margin-top: -7px;
+    }
+}
+
+@media (min-height: 835px) {
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+
+    .main_container{
+        margin-bottom: 210px;
+    }
+
+    footer{
+        position: absolute;
+        bottom: 40px;
+    }
+}
